@@ -1,4 +1,4 @@
-///<reference path="../McBlocks/McBlocks.ts" />
+///<reference path="../../McBlocks/McBlocks/McBlocks.ts" />
 ///<reference path="rotate.ts" />
 
 var content: IMcBlock[] = [
