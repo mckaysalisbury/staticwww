@@ -1,0 +1,71 @@
+/* This is the CSS for the page itself. Customize this to your liking */
+
+body{
+    margin:0;
+    background-color: #74828f;    
+    font-family: "Lucida Console", Monaco, monospace, sans-serif;
+}
+#header{
+    background-color: #96c0ce;
+    background-size: cover;
+    height: 200px;
+    overflow: hidden;
+}
+#headerText{
+    font-size:54pt;
+    text-align: center;
+    color: #525564;
+    padding:20px;
+}
+
+#spacer #headerText{
+    color:white;
+}
+
+#spacer{
+    width:100%;
+    background-color: #c25b56;
+    min-height:30px;
+    margin-bottom:5px;
+}
+
+#limiter {
+    margin: auto;
+    width:85%;
+    max-width: 1100px;
+    text-align: center;
+}
+#blocksArea{
+    margin: auto;    
+}
+
+#resume{
+    background-color: #6895c1;
+    color: white
+}
+#stackOverflow { 
+    background-color: white;
+}
+
+#stackOverflowCareers{
+    background-color: white;    
+}
+
+#linkedIn{
+    background-color: #95d4ea;
+}
+
+#facebook {
+    background-color: #3b5698;
+    color: white;
+}
+
+#wikipedia{
+    background-color: #f6f6f6;    
+}
+
+/* this overrides specific behavior for all blocks*/
+.mainBlock{
+    margin: 5px;
+    text-align: center;
+}

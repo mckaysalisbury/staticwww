@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="250" height="250">
+    <polyline points="175,125 75,25 75,225 175,125" stroke="black" stroke-width="10" fill="none"/>
+    <polyline points="75,125 175,25 175,225 75,125" stroke="black" stroke-width="10" fill="none"/>
+</svg>
