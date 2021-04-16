@@ -18,7 +18,9 @@ var headerImages = [
     "../images/jefferson.jpg",
     "../images/airForceDown.jpg",
     "../images/lincoln.jpg",
-    "../images/blizzfetti.jpg"
+    "../images/blizzfetti.jpg",
+    "../images/frozenRocks.jpg",
+    "../images/laPano.jpg",
 ];
 $(document).ready(function () {
     new Rotation("#header", headerImages)
