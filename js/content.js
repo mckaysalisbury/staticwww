@@ -1,7 +1,7 @@
 ///<reference path="../McBlocks/McBlocks.ts" />
 ///<reference path="rotate.ts" />
 var content = [
-    { id: "resume", header: "Resume", image: "/images/polo.jpg", href: "http://files.mckaysalisbury.com/resume.pdf", alt: "McKay" },
+    { id: "resume", header: "Resume", image: "/images/2021.jpg", href: "http://files.mckaysalisbury.com/resume.pdf", alt: "McKay" },
     // { id: "stackOverflow", header: "Stack Overflow", image: "/images/so-icon.png", href: "http://stackoverflow.com/users/8384/", alt: "Stack Overflow Logo" },
     // { id: "stackOverflow", header: "Stack Overflow", image: "http://stackoverflow.com/users/flair/8384.png", href: "http://stackoverflow.com/users/8384/", alt: "Stack Overflow Flair" },
     { id: "stackOverflow", header: "Stack Overflow", image: "http://stackexchange.com/users/flair/5267.png", href: "http://stackoverflow.com/users/8384/", alt: "Stack Exchange Flair" },
