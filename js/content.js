@@ -13,14 +13,16 @@ var content = [
 McBlocks.Add("#blocksArea", content);
 var headerImages = [
     "../images/airForceUp.jpg",
-    "../images/circuit.jpg",
     "../images/airForceTexture.jpg",
-    "../images/jefferson.jpg",
-    "../images/airForceDown.jpg",
+    "../images/circuit.jpg",
+    // "../images/jefferson.jpg",
+    // "../images/airForceDown.jpg",
     "../images/lincoln.jpg",
     "../images/blizzfetti.jpg",
-    "../images/frozenRocks.jpg",
     "../images/laPano.jpg",
+    "../images/frozenRocks.jpg",
+    "../images/deadHorsePoint.jpg",
+    "../images/mdrs.jpg",
 ];
 $(document).ready(function () {
     new Rotation("#header", headerImages)
