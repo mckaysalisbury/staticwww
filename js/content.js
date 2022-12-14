@@ -14,7 +14,7 @@ McBlocks.Add("#blocksArea", content);
 var headerImages = [
     "../images/airForceUp.jpg",
     "../images/airForceTexture.jpg",
-    "../images/circuit.jpg",
+    // "../images/circuit.jpg",
     // "../images/jefferson.jpg",
     // "../images/airForceDown.jpg",
     "../images/lincoln.jpg",
