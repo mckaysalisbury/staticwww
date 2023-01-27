@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        Use a hash # param
+        <hr />
+        <script>
+            targetDate = new Date(document.location.hash.slice(1))
+            nowDate = new Date()
+            difference = nowDate - targetDate
+            double = new Date(targetDate - difference)
+            half = targetDate + difference / 2
+
+            document.write(double)
+            document.write("<br/>")
+            document.write(half)
+        </script>
+    </body>
+</html>
