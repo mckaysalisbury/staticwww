@@ -5,18 +5,19 @@
         </script>
     </head>
     <body>
-        Use a hash # param
+        <a href="#2000-01-01">Use a hash # param.</a> Just changing the hash may require a <a href="javascript:window.location.reload()">refresh</a>
         <hr />
+        Twice as long ago:
         <script>
-            targetDate = new Date(document.location.hash.slice(1))
-            nowDate = new Date()
-            difference = nowDate - targetDate
-            double = new Date(targetDate - difference)
-            half = targetDate + difference / 2
+            targetDate = new Date(document.location.hash.slice(1));
+            nowDate = new Date();
+            difference = nowDate - targetDate;
+            double = new Date(targetDate - difference);
+            half = new Date(targetDate - 0 + difference / 2); // is `.getTime()` faster than `- 0`? Don't care. `.getTime()` feels like it ought to be more intuitive, but when I see it, I think "Oh, is this just getting the time portion?" or something else wrong. `- 0` feels like it is less intuitive, but yet, you also know you're getting a number out. So I like it better.
 
-            document.write(double)
-            document.write("<br/>")
-            document.write(half)
+            document.write(double);
+            document.write("<br/>Half as long ago: ");
+            document.write(half);
         </script>
     </body>
 </html>
