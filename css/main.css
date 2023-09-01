@@ -1,28 +1,28 @@
 /* This is the CSS for the page itself. Customize this to your liking */
 
-body{
+body {
     margin:0;
     background-color: #74828f;    
     font-family: "Lucida Console", Monaco, monospace, sans-serif;
 }
-#header{
+#header {
     background-color: #96c0ce;
     background-size: cover;
     height: 200px;
     overflow: hidden;
 }
-#headerText{
+#headerText {
     font-size:54pt;
     text-align: center;
     color: #525564;
     padding:20px;
 }
 
-#spacer #headerText{
+#spacer #headerText {
     color:white;
 }
 
-#spacer{
+#spacer {
     width:100%;
     background-color: #c25b56;
     min-height:30px;
@@ -35,7 +35,7 @@ body{
     max-width: 1100px;
     text-align: center;
 }
-#blocksArea{
+#blocksArea {
     margin: auto;
 }
 
@@ -55,14 +55,14 @@ body{
     background-color: white;
 }
 
-#stackOverflowCareers{
+#stackOverflowCareers {
     background-color: white;
 }
 
-#linkedIn{
+#linkedIn {
     background-color: #95d4ea;
 }
-#linkedIn > div > .blockContentImage {
+#linkedIn > .blockContent > .blockContentImage {
     width: 250px;
 }
 
@@ -70,13 +70,16 @@ body{
     color: #3b5698;
     background-color: white;
 }
+#facebook > .blockContent > .blockContentImage {
+    width: 100px;
+}
 
-#wikipedia{
+#wikipedia {
     background-color: #f6f6f6;
 }
 
 /* this overrides specific behavior for all blocks*/
-.mainBlock{
+.mainBlock {
     margin: 5px;
     text-align: center;
 }
