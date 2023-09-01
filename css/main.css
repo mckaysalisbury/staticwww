@@ -36,32 +36,40 @@ body{
     text-align: center;
 }
 #blocksArea{
-    margin: auto;    
+    margin: auto;
 }
 
-#resume{
-    background-color: #6895c1;
-    color: white
+#resume {
+    color: white;
+    background-color: #c25b56;
 }
-#stackOverflow { 
+
+#blueprint {
+    background-color: #6895c1;
+    color: white;
+}
+#stackOverflow {
     background-color: white;
 }
 
 #stackOverflowCareers{
-    background-color: white;    
+    background-color: white;
 }
 
 #linkedIn{
     background-color: #95d4ea;
 }
+#linkedIn > div > .blockContentImage {
+    width: 250px;
+}
 
 #facebook {
-    background-color: #3b5698;
-    color: white;
+    color: #3b5698;
+    background-color: white;
 }
 
 #wikipedia{
-    background-color: #f6f6f6;    
+    background-color: #f6f6f6;
 }
 
 /* this overrides specific behavior for all blocks*/
