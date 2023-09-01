@@ -43,6 +43,9 @@ body{
     color: white;
     background-color: #c25b56;
 }
+#resume > div > .blockContentImage {
+    width: 75px;
+}
 
 #blueprint {
     background-color: #6895c1;
