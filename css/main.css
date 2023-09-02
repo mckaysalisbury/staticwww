@@ -2,7 +2,7 @@
 
 body {
     margin:0;
-    background-color: #74828f;    
+    background-color: #464;
     font-family: "Lucida Console", Monaco, monospace, sans-serif;
 }
 #header {
@@ -40,8 +40,8 @@ body {
 }
 
 #resume {
-    color: white;
-    background-color: #c25b56;
+    color: black;
+    background-color: white;
 }
 #resume > div > .blockContentImage {
     width: 75px;
@@ -52,7 +52,7 @@ body {
     color: white;
 }
 #stackOverflow {
-    background-color: white;
+    background-color: #f7ac6e;
 }
 
 #stackOverflowCareers {
@@ -60,15 +60,15 @@ body {
 }
 
 #linkedIn {
-    background-color: #95d4ea;
+    background-color: white;
 }
 #linkedIn > .blockContent > .blockContentImage {
     width: 250px;
 }
 
 #facebook {
-    color: #3b5698;
-    background-color: white;
+    color: white;
+    background-color: #3b5698;
 }
 #facebook > .blockContent > .blockContentImage {
     width: 100px;
