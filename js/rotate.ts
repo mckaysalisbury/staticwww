@@ -1,17 +1,17 @@
-///<reference path="../../typings/browser.d.ts" />
+// /<reference path="../../typings/browser.d.ts" />
 
 class Rotation {
-    private jMain: JQuery;
-    private jNext: JQuery;
+    private main: HTMLElement;
+    private nextImage: HTMLElement;
     private current: number;
     private images: string[];
     
-    constructor(selector: string, images: string[]) {
-        this.jMain = $(selector);
+    constructor(id: string, images: string[]) {
+        this.main = document.getElementById(id);
         this.images = images;
         this.current = Math.floor(Math.random() * this.images.length) - 1;
-        Rotation.setImage(this.jMain, this.nextCssImage());
-        this.setupNextDiv();
+        Rotation.setImage(this.main, this.nextCssImage());
+        this.appendNextDivToMain();
         this.preLoadNext();
     }
 
@@ -20,39 +20,39 @@ class Rotation {
         return "url(" + this.images[this.current] + ")";
     }
 
-    private static setImage(jDiv: JQuery, cssImageUrl: string) {
-        jDiv.css("background-image", cssImageUrl);
+    private static setImage(element: HTMLElement, cssImageUrl: string) {
+        element.style.backgroundImage = cssImageUrl;
     }
 
-    private setupNextDiv() {
+    private appendNextDivToMain() : void {
         // create image control
-        var img = $("<div/>");
-        img.css("background-size", "cover");
-        img.css("width", "100%");
-        img.css("height", this.jMain.height());
+        var img = document.createElement('div');
+        img.id = "next";
+        img.style.backgroundSize = "cover";
+        img.style.width = "100%";
+        // img.style.height = this.main.height;
         /*background-position: center center; ?? */
+        // this.nextImage.style.display = "none"; // this sets up the display for the fade in.
 
-        this.jNext = img;
-        this.jMain.append(img);
+        this.nextImage = img;
+        this.main.append(img);
     }
 
     private preLoadNext() {
-        var nextImage = this.nextCssImage();
-        this.jNext.css("display", "none"); // this sets up the display for the fade in.
-        Rotation.setImage(this.jNext, nextImage);
+        var nextCssImage = this.nextCssImage();
+        Rotation.setImage(this.nextImage, nextCssImage);
     }
 
     static rotate(me: Rotation) {
-        me.jNext.fadeIn(1000, function() {
-            Rotation.setImage(me.jMain, me.jNext.css("background-image"));
-            me.preLoadNext();
-        })
+        Rotation.setImage(me.main, me.nextImage.style.backgroundImage);
+        me.preLoadNext();
     }
 
     RotateOnClick() {
-        this.jMain.click(this, function(event) {
-            Rotation.rotate(event.data);
-        });
+        this.main.onclick = () => {
+            Rotation.rotate(this);
+        };
+        return this;
     }
 
     RotateOnInterval(durationMilliseconds: number) {

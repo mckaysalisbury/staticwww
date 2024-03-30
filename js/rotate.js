@@ -1,50 +1,50 @@
-///<reference path="../../typings/browser.d.ts" />
-var Rotation = (function () {
-    function Rotation(id, images) {
-        this.jMain = document.getElementById(id);
+// /<reference path="../../typings/browser.d.ts" />
+class Rotation {
+    constructor(id, images) {
+        this.main = document.getElementById(id);
         this.images = images;
         this.current = Math.floor(Math.random() * this.images.length) - 1;
-        Rotation.setImage(this.jMain, this.nextCssImage());
-        this.setupNextDiv();
+        Rotation.setImage(this.main, this.nextCssImage());
+        this.appendNextDivToMain();
         this.preLoadNext();
     }
-    Rotation.prototype.nextCssImage = function () {
+    nextCssImage() {
         this.current = (this.current + 1) % this.images.length;
         return "url(" + this.images[this.current] + ")";
-    };
-    Rotation.setImage = function (div, cssImageUrl) {
-        div.style.backgroundImage = cssImageUrl;
-    };
-    Rotation.prototype.setupNextDiv = function () {
+    }
+    static setImage(element, cssImageUrl) {
+        element.style.backgroundImage = cssImageUrl;
+    }
+    appendNextDivToMain() {
         // create image control
         var img = document.createElement('div');
+        img.id = "next";
         img.style.backgroundSize = "cover";
-        img.style.width = '100%';
-        img.style.height = this.jMain.height;
+        img.style.width = "100%";
+        // img.style.height = this.main.height;
         /*background-position: center center; ?? */
-        this.jNext = img;
-        this.jMain.append(img);
-    };
-    Rotation.prototype.preLoadNext = function () {
-        var nextImage = this.nextCssImage();
-        this.jNext.style.display, "none"; // this sets up the display for the fade in.
-        Rotation.setImage(this.jNext, nextImage);
-    };
-    Rotation.rotate = function (me) {
-        me.jNext.fadeIn(1000, function () {
-            Rotation.setImage(me.jMain, me.jNext.style.backgroundImage);
-            me.preLoadNext();
-        });
-    };
-    Rotation.prototype.RotateOnClick = function () {
-        this.jMain.click(this, function (event) {
-            Rotation.rotate(event.data);
-        });
-    };
-    Rotation.prototype.RotateOnInterval = function (durationMilliseconds) {
+        // this.nextImage.style.display = "none"; // this sets up the display for the fade in.
+        this.nextImage = img;
+        this.main.append(img);
+    }
+    preLoadNext() {
+        var nextCssImage = this.nextCssImage();
+        Rotation.setImage(this.nextImage, nextCssImage);
+    }
+    static rotate(me) {
+        Rotation.setImage(me.main, me.nextImage.style.backgroundImage);
+        me.preLoadNext();
+    }
+    RotateOnClick() {
+        this.main.onclick = () => {
+            Rotation.rotate(this);
+        };
+        return this;
+    }
+    RotateOnInterval(durationMilliseconds) {
         setInterval(function () {
             Rotation.rotate(this);
         }.bind(this), durationMilliseconds);
-    };
-    return Rotation;
-}());
+    }
+}
+//# sourceMappingURL=rotate.js.map
