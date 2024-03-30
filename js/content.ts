@@ -12,7 +12,7 @@ var content: IMcBlock[] = [
     { id: "wikipedia", header: "Wikipedia", image: "https://en.wikipedia.org/static/images/project-logos/enwiki.png", href: "https://en.wikipedia.org/wiki/User:mckaysalisbury", alt: "Wikipedia logo" },
     //,{ id: "blog", header: "Blog", image: "", href: "http://blog.mckaysalisbury.com/" }
 ];
-McBlocks.Add("#blocksArea", content);
+McBlocks.Add("blocksArea", content);
 
 var headerImages: string[] = [
     "../images/airForceUp.jpg",
@@ -23,8 +23,17 @@ var headerImages: string[] = [
     "../images/lincoln.jpg",
     "../images/blizzfetti.jpg"
 ];
-$(document).ready(function() {
-    new Rotation("#header", headerImages)
+
+function simpleReady(func : () => void) : void {
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+        func()
+    } else {
+        document.addEventListener("DOMContentLoaded", func);
+    }
+}
+
+simpleReady(() => {
+    new Rotation("header", headerImages)
         .RotateOnClick();
         //.RotateOnInterval(5000);
 });
