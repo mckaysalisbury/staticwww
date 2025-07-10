@@ -24,6 +24,7 @@ var headerImages = [
     "../images/blizzfetti.webp",
     "../images/laPano.webp",
     "../images/frozenRocks.webp",
+    '../images/legocrop.webp',
     "../images/deadHorsePoint.webp",
     "../images/mdrs.webp",
 ];
